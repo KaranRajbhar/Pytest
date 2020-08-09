@@ -41,9 +41,3 @@ class MobileInventory:
             if cls.balance_inventory[k] < v:
                 raise InsufficientException("Insufficient Stock")
                                 
-if __name__ == "__main__":
-    i = MobileInventory({'Xiaomi': 2, 'Samsung': 3})
-    print(i.balance_inventory)
-    MobileInventory.add_stock({'Oppo': 1})
-    print(i.balance_inventory)
-    MobileInventory.sell_stock({'Poco': 3})
